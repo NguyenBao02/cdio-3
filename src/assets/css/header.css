@@ -1,0 +1,11 @@
+.header-container .search-bar-box {
+    width: 90%;
+    padding-left: 30px;
+}
+
+.header-container .top-bar .navbar {
+    width: 100%;
+    height: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
