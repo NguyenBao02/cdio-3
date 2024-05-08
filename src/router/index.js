@@ -9,38 +9,38 @@ const routes = [
 
     {
         path: '/admin/dang-nhap',
-        component: () => import('../components/DaiLy/DangNhap/index.vue'),
+        component: () => import('../components/Admin/DangNhap/index.vue'),
         meta: { layout: 'auth' },
 
     },
     {
         path: '/admin/dang-ky',
-        component: () => import('../components/DaiLy/DangKy/index.vue'),
+        component: () => import('../components/Admin/DangKy/index.vue'),
         meta: { layout: 'auth' },
     },
     {
         path: '/admin',
-        component: () => import('../components/DaiLy/QuanLy/index.vue'),
+        component: () => import('../components/Admin/QuanLy/index.vue'),
         meta: { layout: 'admin' },
     },
     {
         path: '/admin/quan-ly-tai-khoan',
-        component: () => import('../components/DaiLy/QuanLy/KhachHang/QuanLyTaiKhoan/index.vue'),
+        component: () => import('../components/Admin/QuanLy/KhachHang/QuanLyTaiKhoan/index.vue'),
         meta: { layout: 'admin' },
     },
     {
         path: '/admin/quan-ly-don-hang',
-        component: () => import('../components/DaiLy/QuanLy/KhachHang/QuanLyDonHang/index.vue'),
+        component: () => import('../components/Admin/QuanLy/KhachHang/QuanLyDonHang/index.vue'),
         meta: { layout: 'admin' },
     },
     {
         path: '/admin/quan-ly-san-pham',
-        component: () => import('../components/DaiLy/QuanLy/SanPham/QuanLySanPham/index.vue'),
+        component: () => import('../components/Admin/QuanLy/SanPham/QuanLySanPham/index.vue'),
         meta: { layout: 'admin' },
     },
     {
         path: '/admin/danh-muc',
-        component: () => import('../components/DaiLy/QuanLy/SanPham/DanhMucSanPham/index.vue'),
+        component: () => import('../components/Admin/QuanLy/SanPham/DanhMucSanPham/index.vue'),
         meta: { layout: 'admin' },
     },
 ]
