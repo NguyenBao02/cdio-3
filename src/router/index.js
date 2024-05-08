@@ -63,6 +63,10 @@ const routes = [
         path: '/profile',
         component: () => import('../components/KhachHang/TrangProfile/index.vue')
     },
+    {
+        path: '/chi-tiet-san-pham',
+        component: () => import('../components/KhachHang/ChiTietSanPham/index.vue')
+    },
 ]
 
 const router = createRouter({
