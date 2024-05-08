@@ -6,7 +6,20 @@ const routes = [
         component: () => import('../components/KhachHang/index.vue')
 
     },
-
+    {
+        path: '/dang-ky',
+        component: () => import('../components/KhachHang/DangKy/index.vue'),
+        meta: { layout: 'auth' },
+    },
+    {
+        path: '/dang-nhap',
+        component: () => import('../components/KhachHang/DangNhap/index.vue'),
+        meta: { layout: 'auth' },
+    },
+    {
+        path: '/gio-hang',
+        component: () => import('../components/KhachHang/HomePage/GioHang/index.vue'),
+    },
     {
         path: '/admin/dang-nhap',
         component: () => import('../components/Admin/DangNhap/index.vue'),

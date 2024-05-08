@@ -4,3 +4,7 @@
     margin-bottom: 30px;
     margin-left: 0px;
 }
+
+.app-container .content-container {
+    background-color: #fff;
+}

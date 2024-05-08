@@ -28,4 +28,5 @@ export default {
 @import "../../assets/css/semi-dark.css";
 @import "../../assets/css/header-colors.css";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+@import "../../assets/css/Auth.css";
 </style>
