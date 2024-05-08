@@ -4,7 +4,6 @@ const routes = [
     {
         path: '/',
         component: () => import('../components/KhachHang/index.vue')
-
     },
     {
         path: '/dang-ky',
@@ -65,6 +64,7 @@ const routes = [
         component: () => import('../components/KhachHang/TrangProfile/index.vue')
     },
 ]
+
 const router = createRouter({
     history: createWebHistory(),
     routes: routes
