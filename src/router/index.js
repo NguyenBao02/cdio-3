@@ -5,6 +5,11 @@ const routes = [
         path: '/',
         component: () => import('../components/KhachHang/index.vue')
     },
+
+    {
+        path: '/chi-tiet-san-pham',
+        component: () => import('../components/ChiTietSanPham/index.vue')
+    },
 ]
 
 const router = createRouter({
