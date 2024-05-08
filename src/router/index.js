@@ -56,6 +56,14 @@ const routes = [
         component: () => import('../components/Admin/QuanLy/SanPham/DanhMucSanPham/index.vue'),
         meta: { layout: 'admin' },
     },
+    {
+        path: '/thanh-toan',
+        component: () => import('../components/ThanhToan/index.vue')
+    },
+    {
+        path: '/profile',
+        component: () => import('../components/TrangProfile/index.vue')
+    },
 ]
 const router = createRouter({
     history: createWebHistory(),
