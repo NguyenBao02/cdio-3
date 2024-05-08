@@ -58,11 +58,11 @@ const routes = [
     },
     {
         path: '/thanh-toan',
-        component: () => import('../components/ThanhToan/index.vue')
+        component: () => import('../components/KhachHang/ThanhToan/index.vue')
     },
     {
         path: '/profile',
-        component: () => import('../components/TrangProfile/index.vue')
+        component: () => import('../components/KhachHang/TrangProfile/index.vue')
     },
 ]
 const router = createRouter({
