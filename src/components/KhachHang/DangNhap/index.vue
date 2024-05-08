@@ -43,6 +43,7 @@
                         type="password"
                         class="form-control border-end-0"
                         id="inputChoosePassword"
+                        placeholder="Mật khẩu"
                       />
                       <a
                         href="javascript:;"
@@ -89,7 +90,7 @@
                           href="authentication-signup.html"
                           style="color: #db4444"
                         >
-                          <RouterLink to="/dang-ky">Đăng ký tại đây</RouterLink>
+                          <RouterLink to="/dang-ky" style="color: #db4444">Đăng ký tại đây</RouterLink>
                         </a>
                       </p>
                     </div>

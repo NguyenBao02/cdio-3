@@ -66,6 +66,7 @@
                         type="password"
                         class="form-control border-end-0"
                         id="inputChoosePassword"
+                        placeholder="Mật khẩu"
                       />
                       <a
                         href="javascript:;"
@@ -84,6 +85,7 @@
                         type="password"
                         class="form-control border-end-0"
                         id="inputChoosePassword"
+                        placeholder="Mật khẩu"
                       />
                       <a
                         href="javascript:;"
@@ -105,7 +107,7 @@
                       Bạn đã có tài khoản?
                       <a style="color: #db4444; cursor: pointer">
                         <RouterLink to="/dang-nhap"
-                          >Đăng nhập tại đây</RouterLink
+                        style="color: #db4444 ">Đăng nhập tại đây</RouterLink
                         >
                       </a>
                     </p>

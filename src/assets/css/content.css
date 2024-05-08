@@ -1,6 +1,10 @@
 .page-wrapper {
     height: 100%;
-    margin-top: 60px;
+    margin-top: 60px!important;
     margin-bottom: 30px;
     margin-left: 0px;
+}
+
+.app-container .content-container {
+    background-color: #fff;
 }

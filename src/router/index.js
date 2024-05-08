@@ -19,6 +19,19 @@ const routes = [
         meta: { layout: 'auth' },
     },
 
+
+    {
+        path: '/gio-hang',
+        component: () => import('../components/HomePage/GioHang/index.vue'),
+  
+    },
+
+    {
+        path: '/notfound',
+        component: () => import('../components/NotFound/index.vue'),
+  
+    },
+   
 ]
 const router = createRouter({
     history: createWebHistory(),
