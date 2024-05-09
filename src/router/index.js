@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router"; // cài vue-router:
 const routes = [
     {
         path: '/',
-        component: () => import('../components/KhachHang/index.vue')
+        component: () => import('../components/KhachHang/HomePage/index.vue')
     },
     {
         path: '/dang-ky',
@@ -17,7 +17,7 @@ const routes = [
     },
     {
         path: '/gio-hang',
-        component: () => import('../components/KhachHang/HomePage/GioHang/index.vue'),
+        component: () => import('../components/KhachHang/GioHang/index.vue'),
     },
     {
         path: '/admin/dang-nhap',
