@@ -94,6 +94,7 @@
                 v-on:click="themMoiDanhMuc()"
                 type="button"
                 class="btn btn-primary"
+                data-bs-dismiss="modal"
               >
                 Xác Nhận
               </button>
@@ -240,6 +241,7 @@ export default {
           if (res.data.status) {
             toaster.success(res.data.message);
             this.getDanhMuc();
+            this.them_moi_danh_muc = {};
           }
         });
     },

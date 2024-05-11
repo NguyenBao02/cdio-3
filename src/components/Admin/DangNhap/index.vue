@@ -32,6 +32,7 @@
                       class="form-control"
                       id="inputEmailAddress"
                       placeholder="Email"
+                      v-model="login_data.email"
                     />
                   </div>
                   <div class="col-12">
@@ -44,6 +45,7 @@
                         class="form-control border-end-0"
                         id="inputChoosePassword"
                         placeholder="Mật khẩu"
+                        v-model="login_data.password"
                       />
                       <a
                         href="javascript:;"
@@ -78,9 +80,9 @@
                   <div class="col-12">
                     <div class="d-grid">
                       <button
-                        type="submit"
                         class="btn btn-danger"
                         style="background-color: #db4444"
+                        v-on:click="loginData()"
                       >
                         <i class="bx bxs-lock-open"></i>Đăng nhập
                       </button>
@@ -90,7 +92,7 @@
                           href="authentication-signup.html"
                           style="color: #db4444"
                         >
-                          <RouterLink to="/dang-ky" style="color: #db4444"
+                          <RouterLink to="/admin/dang-ky" style="color: #db4444"
                             >Đăng ký tại đây</RouterLink
                           >
                         </a>
@@ -108,6 +110,34 @@
   </div>
 </template>
 <script>
-export default {};
+import axios from "axios";
+import { createToaster } from "@meforma/vue-toaster";
+const toaster = createToaster({ position: "top-right" });
+
+export default {
+  data() {
+    return {
+      login_data: {},
+    };
+  },
+  mounted() {},
+  methods: {
+    loginData() {
+      axios
+        .post("http://127.0.0.1:8000/api/auth/admin/login", this.login_data)
+        .then((res) => {
+          if (res.data.status) {
+            toaster.success("Thông Báo <br>" + res.data.message);
+            this.login_data = {};
+            localStorage.setItem("key_login", res.data.access_token);
+            this.$router.push("/admin");
+          } else {
+            toaster.error("Thông Báo <br>" + res.data.message);
+            this.login_data = {};
+          }
+        });
+    },
+  },
+};
 </script>
 <style></style>

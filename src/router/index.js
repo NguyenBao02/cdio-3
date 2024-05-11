@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router"; // cài vue-router: npm install vue-router@next --save
+import kiemTraAdmin from "./kiemTraAdmin";
 
 const routes = [
     {
@@ -34,6 +35,7 @@ const routes = [
         path: '/admin',
         component: () => import('../components/Admin/QuanLy/index.vue'),
         meta: { layout: 'admin' },
+        beforeEnter: kiemTraAdmin,
     },
     {
         path: '/admin/quan-ly-tai-khoan',

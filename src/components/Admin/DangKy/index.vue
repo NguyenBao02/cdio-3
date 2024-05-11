@@ -24,14 +24,12 @@
               <div class="form-body mt-3">
                 <div class="row g-3">
                   <div class="col-12">
-                    <label for="inputEmailAddress" class="form-label"
-                      >Họ và Tên</label
-                    >
+                    <label for="inputName" class="form-label">Họ và Tên</label>
                     <input
-                      type="email"
                       class="form-control"
-                      id="inputEmailAddress"
+                      id="inputName"
                       placeholder="Họ và Tên"
+                      v-model="create_data.ho_va_ten"
                     />
                   </div>
                   <div class="col-12">
@@ -43,17 +41,19 @@
                       class="form-control"
                       id="inputEmailAddress"
                       placeholder="Email"
+                      v-model="create_data.email"
                     />
                   </div>
                   <div class="col-12">
-                    <label for="inputEmailAddress" class="form-label"
+                    <label for="inputNumber" class="form-label"
                       >Số Điện Thoại</label
                     >
                     <input
                       type="email"
                       class="form-control"
-                      id="inputEmailAddress"
+                      id="inputNumber"
                       placeholder="Số di động"
+                      v-model="create_data.so_dien_thoai"
                     />
                   </div>
                   <div class="col-12">
@@ -67,6 +67,7 @@
                         class="form-control border-end-0"
                         id="inputChoosePassword"
                         placeholder="Mật khẩu"
+                        v-model="create_data.password"
                       />
                       <a
                         href="javascript:;"
@@ -76,7 +77,7 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <label for="inputChoosePassword" class="form-label"
+                    <label for="inputChooseRePassword" class="form-label"
                       >Nhập Lại mật khẩu</label
                     >
 
@@ -84,8 +85,9 @@
                       <input
                         type="password"
                         class="form-control border-end-0"
-                        id="inputChoosePassword"
+                        id="inputChooseRePassword"
                         placeholder="Mật khẩu"
+                        v-model="this.create_data.re_password"
                       />
                       <a
                         href="javascript:;"
@@ -99,6 +101,7 @@
                       <button
                         class="btn btn-danger"
                         style="background-color: #db4444"
+                        v-on:click="createData()"
                       >
                         <i class="bx bx-user"></i>Đăng Ký
                       </button>
@@ -106,7 +109,7 @@
                     <p class="mt-4 text-center">
                       Bạn đã có tài khoản?
                       <a style="color: #db4444; cursor: pointer">
-                        <RouterLink to="/dang-nhap" style="color: #db4444"
+                        <RouterLink to="/admin/dang-nhap" style="color: #db4444"
                           >Đăng nhập tại đây</RouterLink
                         >
                       </a>
@@ -123,6 +126,32 @@
   </div>
 </template>
 <script>
-export default {};
+import axios from "axios";
+import { createToaster } from "@meforma/vue-toaster";
+const toaster = createToaster({ position: "top-right" });
+
+export default {
+  data() {
+    return {
+      create_data: {},
+    };
+  },
+  mounted() {},
+  methods: {
+    createData() {
+      axios
+        .post("http://127.0.0.1:8000/api/auth/admin/register", this.create_data)
+        .then((res) => {
+          if (res.data.status) {
+            toaster.success("Thông Báo <br>" + res.data.message);
+            this.create_data = {};
+            this.$router.push("/admin/dang-nhap");
+          } else {
+            toaster.error(res.data.message);
+          }
+        });
+    },
+  },
+};
 </script>
 <style></style>
