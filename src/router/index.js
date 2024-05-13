@@ -7,18 +7,19 @@ const routes = [
         component: () => import('../components/KhachHang/HomePage/index.vue')
     },
     {
-        path: '/dang-ky',
+        path: '/khach-hang/dang-ky',
         component: () => import('../components/KhachHang/DangKy/index.vue'),
         meta: { layout: 'auth' },
     },
     {
-        path: '/dang-nhap',
+        path: '/khach-hang/dang-nhap',
         component: () => import('../components/KhachHang/DangNhap/index.vue'),
         meta: { layout: 'auth' },
     },
     {
         path: '/gio-hang',
         component: () => import('../components/KhachHang/GioHang/index.vue'),
+        
     },
     {
         path: '/admin/dang-nhap',
