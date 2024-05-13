@@ -19,7 +19,7 @@ const routes = [
     {
         path: '/gio-hang',
         component: () => import('../components/KhachHang/GioHang/index.vue'),
-        
+
     },
     {
         path: '/admin/dang-nhap',
