@@ -162,202 +162,92 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="row">
-                    <div class="col-lg-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              5.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-secondary"></i> (96)
+                    <template v-for="(v, k) in ds_flash_sale" :key="k">
+                      <template v-if="k < 3">
+                        <div class="col-lg-4">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-md-12 text-center mb-2">
+                                  <img
+                                    v-bind:src="v.thumbnail"
+                                    alt=""
+                                    class="img-fluid"
+                                    style="height: 200px"
+                                  />
+                                </div>
+                                <h5 class="mt-0">{{ v.tieu_de }}</h5>
+                                <br />
+                                <p class="mb-2 me-1">
+                                  <b>Giá: </b>{{ v.gia_ban }} ₫
+                                </p>
+                                <p class="text-decoration-line-through">
+                                  {{ v.gia_khuyen_mai }} ₫
+                                </p>
+                                <hr />
+                                <div
+                                  class="d-flex align-items-center mt-2 fs-6"
+                                >
+                                  <div class="cursor-pointer">
+                                    <i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-secondary"></i>
+                                    (96)
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              5.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-secondary"></i> (96)
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              5.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-secondary"></i> (96)
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      </template>
+                    </template>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="row">
-                    <div class="col-lg-4 d-flex">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://cdn.tgdd.vn/Products/Images/44/302473/asus-gaming-rog-strix-scar-18-g834jy-i9-n6039w-thumb-600x600.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Laptop Asus Gaming ROG Strix</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>98.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              117.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i> (150)
+                    <template v-for="(v, k) in ds_flash_sale" :key="k">
+                      <template v-if="k > 2 && k < 6">
+                        <div class="col-lg-4 d-flex">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-md-12 text-center mb-2">
+                                  <img
+                                    v-bind:src="v.thumbnail"
+                                    alt=""
+                                    class="img-fluid"
+                                    style="height: 200px"
+                                  />
+                                </div>
+                                <h5 class="mt-0">{{ v.tieu_de }}</h5>
+                                <br />
+                                <p class="mb-2 me-1">
+                                  <b>Giá: </b>{{ v.gia_ban }} ₫
+                                </p>
+                                <p class="text-decoration-line-through">
+                                  {{ v.gia_khuyen_mai }} ₫
+                                </p>
+                                <hr />
+                                <div
+                                  class="d-flex align-items-center mt-2 fs-6"
+                                >
+                                  <div class="cursor-pointer">
+                                    <i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i>
+                                    (150)
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 d-flex">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://cdn.tgdd.vn/Products/Images/44/302473/asus-gaming-rog-strix-scar-18-g834jy-i9-n6039w-thumb-600x600.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Laptop Asus Gaming ROG Strix</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>98.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              117.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i> (150)
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 d-flex">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://cdn.tgdd.vn/Products/Images/44/302473/asus-gaming-rog-strix-scar-18-g834jy-i9-n6039w-thumb-600x600.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Laptop Asus Gaming ROG Strix</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>98.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              117.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i> (150)
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      </template>
+                    </template>
                   </div>
                 </div>
               </div>
@@ -513,202 +403,92 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="row">
-                    <div class="col-lg-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              5.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-secondary"></i> (96)
+                    <template v-for="(v, k) in ds_best_selling" :key="k">
+                      <template v-if="k > 2 && k < 6">
+                        <div class="col-lg-4">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-md-12 text-center mb-2">
+                                  <img
+                                    v-bind:src="v.thumbnail"
+                                    alt=""
+                                    class="img-fluid"
+                                    style="height: 200px"
+                                  />
+                                </div>
+                                <h5 class="mt-0">{{ v.tieu_de }}</h5>
+                                <br />
+                                <p class="mb-2 me-1">
+                                  <b>Giá: </b>{{ v.gia_ban }} ₫
+                                </p>
+                                <p class="text-decoration-line-through">
+                                  {{ v.gia_khuyen_mai }} ₫
+                                </p>
+                                <hr />
+                                <div
+                                  class="d-flex align-items-center mt-2 fs-6"
+                                >
+                                  <div class="cursor-pointer">
+                                    <i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-secondary"></i>
+                                    (96)
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              5.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-secondary"></i> (96)
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              5.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-secondary"></i> (96)
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      </template>
+                    </template>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="row">
-                    <div class="col-lg-4 d-flex">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://cdn.tgdd.vn/Products/Images/44/302473/asus-gaming-rog-strix-scar-18-g834jy-i9-n6039w-thumb-600x600.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Laptop Asus Gaming ROG Strix</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>98.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              117.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i> (150)
+                    <template v-for="(v, k) in ds_best_selling" :key="k">
+                      <template v-if="k > 2 && k < 6">
+                        <div class="col-lg-4 d-flex">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-md-12 text-center mb-2">
+                                  <img
+                                    v-bind:src="v.thumbnail"
+                                    alt=""
+                                    class="img-fluid"
+                                    style="height: 200px"
+                                  />
+                                </div>
+                                <h5 class="mt-0">{{ v.tieu_de }}</h5>
+                                <br />
+                                <p class="mb-2 me-1">
+                                  <b>Giá: </b>{{ v.gia_ban }} ₫
+                                </p>
+                                <p class="text-decoration-line-through">
+                                  {{ v.gia_khuyen_mai }} ₫
+                                </p>
+                                <hr />
+                                <div
+                                  class="d-flex align-items-center mt-2 fs-6"
+                                >
+                                  <div class="cursor-pointer">
+                                    <i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-warning"></i
+                                    ><i class="bx bxs-star text-secondary"></i>
+                                    (96)
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 d-flex">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://cdn.tgdd.vn/Products/Images/44/302473/asus-gaming-rog-strix-scar-18-g834jy-i9-n6039w-thumb-600x600.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Laptop Asus Gaming ROG Strix</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>98.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              117.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i> (150)
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 d-flex">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12 text-center mb-2">
-                              <img
-                                src="https://cdn.tgdd.vn/Products/Images/44/302473/asus-gaming-rog-strix-scar-18-g834jy-i9-n6039w-thumb-600x600.jpg"
-                                alt=""
-                                class="img-fluid"
-                                style="height: 200px"
-                              />
-                            </div>
-                            <h5 class="mt-0">Laptop Asus Gaming ROG Strix</h5>
-                            <br />
-                            <p class="mb-2 me-1"><b>Giá: </b>98.499.000₫</p>
-                            <p class="text-decoration-line-through">
-                              117.399.000₫
-                            </p>
-                            <hr />
-                            <div class="d-flex align-items-center mt-2 fs-6">
-                              <div class="cursor-pointer">
-                                <i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i
-                                ><i class="bx bxs-star text-warning"></i> (150)
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      </template>
+                    </template>
                   </div>
                 </div>
               </div>
@@ -741,9 +521,15 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12">
-      <img src="/src/assets/images/1.png" class="img-fluid" />
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <img
+          src="https://png.pngtree.com/background/20220723/original/pngtree-special-offer-sale-80-percent-banner-background-picture-image_1738559.jpg"
+          style="width: 20000px"
+          class="img-fluid"
+        />
+      </div>
     </div>
   </div>
   <div class="container">
@@ -774,235 +560,40 @@
     </div>
     <hr />
     <div class="row mt-2 product-grid">
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12 text-center mb-2">
-                <img
-                  src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                  alt=""
-                  class="img-fluid"
-                  style="height: 200px"
-                />
-              </div>
-              <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-              <br />
-              <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-              <div class="d-flex align-items-center mt-2 fs-6">
-                <div class="cursor-pointer">
-                  <i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-secondary"></i> (96)
+      <template v-for="(v, k) in ds_san_pham" :key="k">
+        <div class="col-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 text-center mb-2">
+                  <img
+                    v-bind:src="v.thumbnail"
+                    alt=""
+                    class="img-fluid"
+                    style="height: 200px"
+                  />
+                </div>
+                <h5 class="mt-0">{{ v.tieu_de }}</h5>
+                <br />
+                <p class="mb-2 me-1"><b>Giá: </b>{{ v.gia_ban }} ₫</p>
+                <br />
+                <p class="text-decoration-line-through">
+                  {{ v.gia_khuyen_mai }} ₫
+                </p>
+                <div class="d-flex align-items-center mt-2 fs-6">
+                  <div class="cursor-pointer">
+                    <i class="bx bxs-star text-warning"></i
+                    ><i class="bx bxs-star text-warning"></i
+                    ><i class="bx bxs-star text-warning"></i
+                    ><i class="bx bxs-star text-warning"></i
+                    ><i class="bx bxs-star text-secondary"></i> (96)
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12 text-center mb-2">
-                <img
-                  src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                  alt=""
-                  class="img-fluid"
-                  style="height: 200px"
-                />
-              </div>
-              <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-              <br />
-              <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-              <div class="d-flex align-items-center mt-2 fs-6">
-                <div class="cursor-pointer">
-                  <i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-secondary"></i> (96)
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12 text-center mb-2">
-                <img
-                  src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                  alt=""
-                  class="img-fluid"
-                  style="height: 200px"
-                />
-              </div>
-              <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-              <br />
-              <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-              <div class="d-flex align-items-center mt-2 fs-6">
-                <div class="cursor-pointer">
-                  <i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-secondary"></i> (96)
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12 text-center mb-2">
-                <img
-                  src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                  alt=""
-                  class="img-fluid"
-                  style="height: 200px"
-                />
-              </div>
-              <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-              <br />
-              <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-              <div class="d-flex align-items-center mt-2 fs-6">
-                <div class="cursor-pointer">
-                  <i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-secondary"></i> (96)
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-2 product-grid">
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12 text-center mb-2">
-                <img
-                  src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                  alt=""
-                  class="img-fluid"
-                  style="height: 200px"
-                />
-              </div>
-              <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-              <br />
-              <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-              <div class="d-flex align-items-center mt-2 fs-6">
-                <div class="cursor-pointer">
-                  <i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-secondary"></i> (96)
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12 text-center mb-2">
-                <img
-                  src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                  alt=""
-                  class="img-fluid"
-                  style="height: 200px"
-                />
-              </div>
-              <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-              <br />
-              <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-              <div class="d-flex align-items-center mt-2 fs-6">
-                <div class="cursor-pointer">
-                  <i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-secondary"></i> (96)
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12 text-center mb-2">
-                <img
-                  src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                  alt=""
-                  class="img-fluid"
-                  style="height: 200px"
-                />
-              </div>
-              <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-              <br />
-              <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-              <div class="d-flex align-items-center mt-2 fs-6">
-                <div class="cursor-pointer">
-                  <i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-secondary"></i> (96)
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12 text-center mb-2">
-                <img
-                  src="https://hanoicomputercdn.com/media/product/67793_may_choi_game_nintendo_switch_lite_coral_mau_hong_0001_2.jpg"
-                  alt=""
-                  class="img-fluid"
-                  style="height: 200px"
-                />
-              </div>
-              <h5 class="mt-0">Máy Chơi Game Nintendo</h5>
-              <br />
-              <p class="mb-2 me-1"><b>Giá: </b>4.499.000₫</p>
-              <div class="d-flex align-items-center mt-2 fs-6">
-                <div class="cursor-pointer">
-                  <i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-warning"></i
-                  ><i class="bx bxs-star text-secondary"></i> (96)
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-center mt-1">
-      <button class="btn btn-danger">View All Products</button>
+      </template>
     </div>
     <hr />
   </div>
@@ -1077,6 +668,45 @@
   </div>
 </template>
 <script>
-export default {};
+import axios from "axios";
+import { createToaster } from "@meforma/vue-toaster";
+const toaster = createToaster({ position: "top-right" });
+export default {
+  data() {
+    return {
+      ds_flash_sale: [],
+      ds_san_pham: [],
+      ds_best_selling: [],
+    };
+  },
+  mounted() {
+    this.LayDuLieuFlashSale();
+    this.LayDuLieuSanPham();
+    this.LayDuLieuBestSelling();
+  },
+  methods: {
+    LayDuLieuFlashSale() {
+      axios
+        .get("http://127.0.0.1:8000/api/admin/danh-sach-flash-sale/data")
+        .then((res) => {
+          this.ds_flash_sale = res.data.data;
+        });
+    },
+    LayDuLieuSanPham() {
+      axios
+        .get("http://127.0.0.1:8000/api/admin/danh-sach/data")
+        .then((res) => {
+          this.ds_san_pham = res.data.data;
+        });
+    },
+    LayDuLieuBestSelling() {
+      axios
+        .get("http://127.0.0.1:8000/api/admin/danh-sach-best-selling/data")
+        .then((res) => {
+          this.ds_best_selling = res.data.data;
+        });
+    },
+  },
+};
 </script>
 <style></style>
