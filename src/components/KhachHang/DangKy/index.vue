@@ -32,6 +32,7 @@
                       class="form-control"
                       id="inputEmailAddress"
                       placeholder="Họ và Tên"
+                      v-model="create_data.ho_va_ten"
                     />
                   </div>
                   <div class="col-12">
@@ -43,6 +44,8 @@
                       class="form-control"
                       id="inputEmailAddress"
                       placeholder="Email"
+                      v-model="create_data.email"
+
                     />
                   </div>
                   <div class="col-12">
@@ -54,6 +57,8 @@
                       class="form-control"
                       id="inputEmailAddress"
                       placeholder="Số di động"
+                      v-model="create_data.so_dien_thoai"
+
                     />
                   </div>
                   <div class="col-12">
@@ -67,6 +72,8 @@
                         class="form-control border-end-0"
                         id="inputChoosePassword"
                         placeholder="Mật khẩu"
+                      v-model="create_data.password"
+
                       />
                       <a
                         href="javascript:;"
@@ -86,6 +93,8 @@
                         class="form-control border-end-0"
                         id="inputChoosePassword"
                         placeholder="Mật khẩu"
+                      v-model="create_data.re_password"
+
                       />
                       <a
                         href="javascript:;"
@@ -93,12 +102,14 @@
                         ><i class="bx bx-hide"></i
                       ></a>
                     </div>
+                    
                   </div>
                   <div class="col-12">
                     <div class="d-grid">
                       <button
                         class="btn btn-danger"
                         style="background-color: #db4444"
+                        v-on:click="createData()"
                       >
                         <i class="bx bx-user"></i>Đăng Ký
                       </button>
@@ -123,6 +134,34 @@
   </div>
 </template>
 <script>
-export default {};
+
+import axios from "axios";
+import { createToaster } from "@meforma/vue-toaster";
+const toaster = createToaster({ position: "top-right" });
+
+export default {
+  data() {
+    return {
+      create_data: {},
+    };
+  },
+  mounted() {},
+  methods: {
+    createData() {
+      axios
+        .post("http://127.0.0.1:8000/api/auth/khachhang/register", this.create_data)
+        .then((res) => {
+          if (res.data.status) {
+            toaster.success("Thông Báo <br>" + res.data.message);
+            this.create_data = {};
+            this.$router.push("/khach-hang/dang-nhap");
+          } else {
+            toaster.error(res.data.message);
+          }
+        });
+    },
+  },
+};
+
 </script>
 <style></style>
