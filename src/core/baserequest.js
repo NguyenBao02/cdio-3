@@ -4,13 +4,13 @@ import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
 
 export default {
-    // getHeader() {
-    //     let token = window.localStorage.getItem('chia_khoa_16');
-    //     if (token == null) {
-    //         return {}
-    //     }
-    //     return { Authorization: 'Bearer ' + token }
-    // },
+    getHeader() {
+        let token = window.localStorage.getItem('chia_khoa_16');
+        if (token == null) {
+            return {}
+        }
+        return { Authorization: 'Bearer ' + token }
+    },
     get(url) {
         return axios.get(apiUrl + url, { headers: this.getHeader() }).catch((res) => {
             var list_error = Object.values(res.response.data.errors);

@@ -44,6 +44,20 @@ export default {
           ],
         },
         {
+          title: "Đại Lý",
+          icon: "fa fa-chart-area",
+          child: [
+            {
+              title: "Thêm Mới Đại Lý",
+              href: "/admin/them-moi-dai-ly",
+            },
+            {
+              title: "Danh Sách Đại Lý",
+              href: "/admin/danh-sach-dai-ly",
+            },
+          ],
+        },
+        {
           title: "Sản Phẩm",
           icon: "fa fa-chart-area",
           child: [
@@ -52,12 +66,22 @@ export default {
               href: "/admin/quan-ly-san-pham",
             },
             {
-              title: "Nhập Kho Sản Phẩm",
-              // href: "/admin/quan-ly/quan-ly-tai-khoan",
-            },
-            {
               title: "Danh Mục Sản Phẩm",
               href: "/admin/danh-muc",
+            },
+          ],
+        },
+        {
+          title: "Nhập Kho",
+          icon: "fa fa-chart-area",
+          child: [
+            {
+              title: "Quản Lý Nhập Kho",
+              href: "/admin/quan-ly-nhap-kho",
+            },
+            {
+              title: "Hóa Đơn Nhập Kho",
+              href: "/admin/hoa-don-nhap-kho",
             },
           ],
         },
