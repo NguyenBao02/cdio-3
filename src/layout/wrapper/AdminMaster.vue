@@ -25,7 +25,7 @@ export default {
           hiddenOnCollapse: true,
         },
         {
-          href: "/",
+          href: "/admin",
           title: "Trang Chủ",
           icon: "fa fa-user",
         },
