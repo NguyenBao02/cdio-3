@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"; // cài vue-router: npm install vue-router@next --save
 import kiemTraAdmin from "./kiemTraAdmin";
+import kiemTraKhachHang from "./kiemTraKhachHang";
 
 const routes = [
     {
@@ -92,7 +93,9 @@ const routes = [
     },
     {
         path: '/profile',
-        component: () => import('../components/KhachHang/TrangProfile/index.vue')
+        component: () => import('../components/KhachHang/TrangProfile/index.vue'),
+        beforeEnter: kiemTraKhachHang,
+
     },
     {
         path: '/chi-tiet-san-pham',
