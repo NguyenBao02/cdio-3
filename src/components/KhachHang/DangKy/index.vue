@@ -45,7 +45,6 @@
                       id="inputEmailAddress"
                       placeholder="Email"
                       v-model="create_data.email"
-
                     />
                   </div>
                   <div class="col-12">
@@ -58,7 +57,6 @@
                       id="inputEmailAddress"
                       placeholder="Số di động"
                       v-model="create_data.so_dien_thoai"
-
                     />
                   </div>
                   <div class="col-12">
@@ -72,8 +70,7 @@
                         class="form-control border-end-0"
                         id="inputChoosePassword"
                         placeholder="Mật khẩu"
-                      v-model="create_data.password"
-
+                        v-model="create_data.password"
                       />
                       <a
                         href="javascript:;"
@@ -93,8 +90,7 @@
                         class="form-control border-end-0"
                         id="inputChoosePassword"
                         placeholder="Mật khẩu"
-                      v-model="create_data.re_password"
-
+                        v-model="create_data.re_password"
                       />
                       <a
                         href="javascript:;"
@@ -102,7 +98,6 @@
                         ><i class="bx bx-hide"></i
                       ></a>
                     </div>
-                    
                   </div>
                   <div class="col-12">
                     <div class="d-grid">
@@ -117,7 +112,9 @@
                     <p class="mt-4 text-center">
                       Bạn đã có tài khoản?
                       <a style="color: #db4444; cursor: pointer">
-                        <RouterLink to="/dang-nhap" style="color: #db4444"
+                        <RouterLink
+                          to="/khach-hang/dang-nhap"
+                          style="color: #db4444"
                           >Đăng nhập tại đây</RouterLink
                         >
                       </a>
@@ -134,7 +131,6 @@
   </div>
 </template>
 <script>
-
 import axios from "axios";
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
@@ -149,7 +145,10 @@ export default {
   methods: {
     createData() {
       axios
-        .post("http://127.0.0.1:8000/api/auth/khachhang/register", this.create_data)
+        .post(
+          "http://127.0.0.1:8000/api/auth/khachhang/register",
+          this.create_data
+        )
         .then((res) => {
           if (res.data.status) {
             toaster.success("Thông Báo <br>" + res.data.message);
@@ -162,6 +161,5 @@ export default {
     },
   },
 };
-
 </script>
 <style></style>

@@ -33,7 +33,7 @@
                       id="inputEmailAddress"
                       placeholder="Email"
                       v-model="login_data.email"
-                    />  
+                    />
                   </div>
                   <div class="col-12">
                     <label for="inputChoosePassword" class="form-label"
@@ -45,8 +45,7 @@
                         class="form-control border-end-0"
                         id="inputChoosePassword"
                         placeholder="Mật khẩu"
-                      v-model="login_data.password"
-
+                        v-model="login_data.password"
                       />
                       <a
                         href="javascript:;"
@@ -94,7 +93,9 @@
                           href="authentication-signup.html"
                           style="color: #db4444"
                         >
-                          <RouterLink to="/dang-ky" style="color: #db4444"
+                          <RouterLink
+                            to="/khach-hang/dang-ky"
+                            style="color: #db4444"
                             >Đăng ký tại đây</RouterLink
                           >
                         </a>
@@ -112,7 +113,6 @@
   </div>
 </template>
 <script>
-
 import axios from "axios";
 import { createToaster } from "@meforma/vue-toaster";
 const toaster = createToaster({ position: "top-right" });
@@ -133,7 +133,7 @@ export default {
             this.login_data = {};
             localStorage.setItem("key_login", res.data.access_token);
             this.$router.push("/");
-          } else if(res.data.status == 2){ 
+          } else if (res.data.status == 2) {
             toaster.warning("Thông Báo <br>" + res.data.message);
             this.login_data = {};
           } else {
