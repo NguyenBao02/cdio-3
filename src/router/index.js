@@ -8,6 +8,10 @@ const routes = [
         component: () => import('../components/KhachHang/HomePage/index.vue')
     },
     {
+        path: '/not-found',
+        component: () => import('../components/KhachHang/NotFound/index.vue')
+    },
+    {
         path: '/khach-hang/dang-ky',
         component: () => import('../components/KhachHang/DangKy/index.vue'),
         meta: { layout: 'auth' },

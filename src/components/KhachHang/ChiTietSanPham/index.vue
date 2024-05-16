@@ -58,16 +58,18 @@
                     class="btn btn-outline-danger"
                     type="button"
                     id="button-plus"
+                    v-on:click="so_luong--"
                   >
-                    +
+                    −
                   </button>
                   <input v-model="so_luong" type="text" class="form-control" />
                   <button
                     class="btn btn-outline-danger"
                     type="button"
                     id="button-minus"
+                    v-on:click="so_luong++"
                   >
-                    −
+                    +
                   </button>
                 </div>
               </div>

@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ["January", "February", "March"],
+        labels: ["Điện Thoại", "Laptop", "Màn Hình"],
         datasets: [
           { data: [40, 20, 12], backgroundColor: ["red", "blue", "yellow"] },
         ],

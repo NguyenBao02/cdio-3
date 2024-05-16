@@ -132,6 +132,7 @@ export default {
             toaster.success("Thông Báo <br>" + res.data.message);
             this.login_data = {};
             localStorage.setItem("key_login", res.data.access_token);
+            localStorage.setItem("ten_kh", res.data.ten_kh);
             this.$router.push("/");
           } else if (res.data.status == 2) {
             toaster.warning("Thông Báo <br>" + res.data.message);

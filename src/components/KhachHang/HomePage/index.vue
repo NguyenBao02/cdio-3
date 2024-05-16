@@ -713,6 +713,12 @@ export default {
           this.ds_best_selling = res.data.data;
         });
     },
+    formatToVND(number) {
+      return number.toLocaleString("vi-VN", {
+        style: "currency",
+        currency: "VND",
+      });
+    },
   },
 };
 </script>
