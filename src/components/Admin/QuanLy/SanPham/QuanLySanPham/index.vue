@@ -51,7 +51,7 @@ export default {
   methods: {
     getData() {
       axios
-        .get("http://127.0.0.1:8000/api/admin/san-pham/get-data")
+        .get("http://127.0.0.1:8000/api/admin/danh-sach/data")
         .then((res) => {
           this.load_data = res.data.data;
         });

@@ -1,10 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router"; // cài vue-router: npm install vue-router@next --save
 import kiemTraAdmin from "./kiemTraAdmin";
+import kiemTraKhachHang from "./kiemTraKhachHang";
 
 const routes = [
     {
         path: '/',
         component: () => import('../components/KhachHang/HomePage/index.vue')
+    },
+    {
+        path: '/not-found',
+        component: () => import('../components/KhachHang/NotFound/index.vue')
     },
     {
         path: '/khach-hang/dang-ky',
@@ -19,7 +24,7 @@ const routes = [
     {
         path: '/gio-hang',
         component: () => import('../components/KhachHang/GioHang/index.vue'),
-
+        beforeEnter: kiemTraKhachHang,
     },
     {
         path: '/admin/dang-nhap',
@@ -92,11 +97,13 @@ const routes = [
     },
     {
         path: '/profile',
-        component: () => import('../components/KhachHang/TrangProfile/index.vue')
+        component: () => import('../components/KhachHang/TrangProfile/index.vue'),
+        beforeEnter: kiemTraKhachHang,
     },
     {
-        path: '/chi-tiet-san-pham',
-        component: () => import('../components/KhachHang/ChiTietSanPham/index.vue')
+        path: '/chi-tiet-san-pham/:id_san_pham-:slug_san_pham',
+        component: () => import('../components/KhachHang/ChiTietSanPham/index.vue'),
+        props: true,
     },
 ]
 
